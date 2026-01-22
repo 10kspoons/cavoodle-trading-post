@@ -11,6 +11,7 @@ using CavoodleTrading.Api.Features.Listings;
 using CavoodleTrading.Api.Features.PersonalityQuiz;
 using CavoodleTrading.Api.Features.Users;
 using CavoodleTrading.Api.Features.Messaging;
+using CavoodleTrading.Api.Features.Seed;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()
@@ -178,6 +179,7 @@ app.MapListingsEndpoints();
 app.MapQuizEndpoints();
 app.MapUsersEndpoints();
 app.MapMessagingEndpoints();
+app.MapSeedEndpoints();
 
 // SignalR Hub
 app.MapHub<MessagingHub>("/hubs/messaging");

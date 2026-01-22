@@ -1,0 +1,103 @@
+time="2026-01-22T11:11:37+10:00" level=warning msg="C:\\Users\\paul\\source\\repos\\capoo-trade\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+Compose now can delegate build to bake for better performances
+Just set COMPOSE_BAKE=true
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [api internal] load build definition from Dockerfile
+#1 transferring dockerfile: 995B done
+#1 DONE 0.0s
+
+#2 [api internal] load metadata for mcr.microsoft.com/dotnet/sdk:9.0
+#2 DONE 0.1s
+
+#3 [api internal] load metadata for mcr.microsoft.com/dotnet/aspnet:9.0
+#3 DONE 0.2s
+
+#4 [api internal] load .dockerignore
+#4 transferring context: 202B done
+#4 DONE 0.0s
+
+#5 [api build 1/7] FROM mcr.microsoft.com/dotnet/sdk:9.0@sha256:0d84f05256dec37a5d1739158fd5ea197b8ad3b4e8d0e32be47b754db5963a9e
+#5 resolve mcr.microsoft.com/dotnet/sdk:9.0@sha256:0d84f05256dec37a5d1739158fd5ea197b8ad3b4e8d0e32be47b754db5963a9e 0.0s done
+#5 DONE 0.0s
+
+#6 [api base 1/3] FROM mcr.microsoft.com/dotnet/aspnet:9.0@sha256:8bbb7b9045f04a32d2eaad43b351e67f07c1f9604811dd505fc3654b4bec2176
+#6 resolve mcr.microsoft.com/dotnet/aspnet:9.0@sha256:8bbb7b9045f04a32d2eaad43b351e67f07c1f9604811dd505fc3654b4bec2176 0.0s done
+#6 DONE 0.0s
+
+#7 [api internal] load build context
+#7 transferring context: 2.53kB done
+#7 DONE 0.0s
+
+#8 [api build 5/7] COPY src/ .
+#8 CACHED
+
+#9 [api build 3/7] COPY src/CavoodleTrading.Api/CavoodleTrading.Api.csproj CavoodleTrading.Api/
+#9 CACHED
+
+#10 [api build 2/7] WORKDIR /src
+#10 CACHED
+
+#11 [api build 4/7] RUN dotnet restore CavoodleTrading.Api/CavoodleTrading.Api.csproj
+#11 CACHED
+
+#12 [api build 6/7] WORKDIR /src/CavoodleTrading.Api
+#12 CACHED
+
+#13 [api build 7/7] RUN dotnet build CavoodleTrading.Api.csproj --no-restore -c Release -o /app/build
+#13 3.241 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(50,17): error CS0117: 'ApplicationUser' does not contain a definition for 'Badges' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.241 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(77,17): error CS0117: 'CavoodleListing' does not contain a definition for 'Personality' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.241 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(79,21): error CS0117: 'PersonalityProfile' does not contain a definition for 'PersonalityType' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.241 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(103,17): error CS0117: 'CavoodleListing' does not contain a definition for 'Personality' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.241 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(105,21): error CS0117: 'PersonalityProfile' does not contain a definition for 'PersonalityType' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.241 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(105,55): error CS0117: 'PersonalityType' does not contain a definition for 'ZoomieChampion' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.241 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(129,17): error CS0117: 'CavoodleListing' does not contain a definition for 'Personality' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.241 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(131,21): error CS0117: 'PersonalityProfile' does not contain a definition for 'PersonalityType' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.241 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(155,17): error CS0117: 'CavoodleListing' does not contain a definition for 'Personality' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.241 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(157,21): error CS0117: 'PersonalityProfile' does not contain a definition for 'PersonalityType' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.241 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(157,55): error CS0117: 'PersonalityType' does not contain a definition for 'DramaFloof' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.241 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(181,17): error CS0117: 'CavoodleListing' does not contain a definition for 'Personality' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.241 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(183,21): error CS0117: 'PersonalityProfile' does not contain a definition for 'PersonalityType' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.241 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(183,55): error CS0117: 'PersonalityType' does not contain a definition for 'VelcroFloof' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.241 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(207,17): error CS0117: 'CavoodleListing' does not contain a definition for 'Personality' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.241 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(209,21): error CS0117: 'PersonalityProfile' does not contain a definition for 'PersonalityType' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.241 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(209,55): error CS0117: 'PersonalityType' does not contain a definition for 'BellyTrapExpert' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.264 
+#13 3.265 Build FAILED.
+#13 3.265 
+#13 3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(50,17): error CS0117: 'ApplicationUser' does not contain a definition for 'Badges' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(77,17): error CS0117: 'CavoodleListing' does not contain a definition for 'Personality' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(79,21): error CS0117: 'PersonalityProfile' does not contain a definition for 'PersonalityType' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(103,17): error CS0117: 'CavoodleListing' does not contain a definition for 'Personality' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(105,21): error CS0117: 'PersonalityProfile' does not contain a definition for 'PersonalityType' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(105,55): error CS0117: 'PersonalityType' does not contain a definition for 'ZoomieChampion' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(129,17): error CS0117: 'CavoodleListing' does not contain a definition for 'Personality' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(131,21): error CS0117: 'PersonalityProfile' does not contain a definition for 'PersonalityType' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(155,17): error CS0117: 'CavoodleListing' does not contain a definition for 'Personality' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(157,21): error CS0117: 'PersonalityProfile' does not contain a definition for 'PersonalityType' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(157,55): error CS0117: 'PersonalityType' does not contain a definition for 'DramaFloof' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(181,17): error CS0117: 'CavoodleListing' does not contain a definition for 'Personality' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(183,21): error CS0117: 'PersonalityProfile' does not contain a definition for 'PersonalityType' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(183,55): error CS0117: 'PersonalityType' does not contain a definition for 'VelcroFloof' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(207,17): error CS0117: 'CavoodleListing' does not contain a definition for 'Personality' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(209,21): error CS0117: 'PersonalityProfile' does not contain a definition for 'PersonalityType' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(209,55): error CS0117: 'PersonalityType' does not contain a definition for 'BellyTrapExpert' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#13 3.265     0 Warning(s)
+#13 3.265     17 Error(s)
+#13 3.266 
+#13 3.266 Time Elapsed 00:00:02.82
+#13 ERROR: process "/bin/sh -c dotnet build CavoodleTrading.Api.csproj --no-restore -c Release -o /app/build" did not complete successfully: exit code: 1
+------
+ > [api build 7/7] RUN dotnet build CavoodleTrading.Api.csproj --no-restore -c Release -o /app/build:
+3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(181,17): error CS0117: 'CavoodleListing' does not contain a definition for 'Personality' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(183,21): error CS0117: 'PersonalityProfile' does not contain a definition for 'PersonalityType' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(183,55): error CS0117: 'PersonalityType' does not contain a definition for 'VelcroFloof' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(207,17): error CS0117: 'CavoodleListing' does not contain a definition for 'Personality' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(209,21): error CS0117: 'PersonalityProfile' does not contain a definition for 'PersonalityType' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+3.265 /src/CavoodleTrading.Api/Features/Seed/SeedEndpoints.cs(209,55): error CS0117: 'PersonalityType' does not contain a definition for 'BellyTrapExpert' [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+3.265     0 Warning(s)
+3.265     17 Error(s)
+3.266 
+3.266 Time Elapsed 00:00:02.82
+------
+failed to solve: process "/bin/sh -c dotnet build CavoodleTrading.Api.csproj --no-restore -c Release -o /app/build" did not complete successfully: exit code: 1
