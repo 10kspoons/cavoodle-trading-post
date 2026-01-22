@@ -255,14 +255,20 @@ public static class ListingsEndpoints
 
     private static string GetPersonalityDisplayName(PersonalityType type) => type switch
     {
-        PersonalityType.CouchThief => "Professional Couch Thief",
-        PersonalityType.ZoomiesChampion => "Olympic Zoomies Champion",
-        PersonalityType.TreatNegotiator => "Professional Treat Negotiator",
-        PersonalityType.SockCollector => "Certified Sock Collector",
-        PersonalityType.BarkingBarrister => "Barking Barrister",
-        PersonalityType.VelcroVelvet => "Velcro Dog Extraordinaire",
-        PersonalityType.GardenDestroyer => "Landscape Architect",
-        PersonalityType.DramaQueen => "Dramatic Arts Major",
+        PersonalityType.CouchThief => "🛋️ Professional Couch Thief",
+        PersonalityType.CushionEngineer => "🏗️ Certified Cushion Engineer",
+        PersonalityType.ZoomiesChampion => "🏃 Olympic Zoomies Gold Medalist",
+        PersonalityType.PerpetualNapper => "😴 Napping is a Lifestyle",
+        PersonalityType.TreatNegotiator => "🍪 Professional Treat Negotiator",
+        PersonalityType.FloorFoodInspector => "🔍 Floor Quality Control Officer",
+        PersonalityType.SockCollector => "🧦 Sock Acquisition Specialist",
+        PersonalityType.ShoeGuardian => "👟 Designated Shoe Protector",
+        PersonalityType.DramaQueen => "🎭 Dramatic Arts Major",
+        PersonalityType.VelcroVelvet => "🧲 Velcro Dog Extraordinaire",
+        PersonalityType.GardenArchitect => "🌱 Landscape Remodeling Consultant",
+        PersonalityType.SquirrelIntelligence => "🐿️ Counter-Squirrel Operations Director",
+        PersonalityType.WindowWatcher => "🪟 Neighborhood Watch Commander",
+        PersonalityType.DoorGreeter => "🚪 Chief Happiness Officer",
         _ => type.ToString()
     };
 }

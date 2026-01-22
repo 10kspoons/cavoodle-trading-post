@@ -207,13 +207,19 @@ public static class PersonalityCalculator
         var typeScores = new Dictionary<PersonalityType, int>
         {
             [PersonalityType.CouchThief] = scores["couch"] + scores["sass"],
+            [PersonalityType.CushionEngineer] = scores["couch"] + scores["chill"],
             [PersonalityType.ZoomiesChampion] = scores["zoomies"] + scores["energy"],
+            [PersonalityType.PerpetualNapper] = scores["chill"] * 2,
             [PersonalityType.TreatNegotiator] = scores["treat"] + scores["sass"],
+            [PersonalityType.FloorFoodInspector] = scores["treat"] + scores["energy"],
             [PersonalityType.SockCollector] = scores["sock"] + scores["garden"],
-            [PersonalityType.BarkingBarrister] = scores["bark"] + scores["sass"],
+            [PersonalityType.ShoeGuardian] = scores["sock"] + scores["velcro"],
+            [PersonalityType.DramaQueen] = scores["drama"] + scores["sass"],
             [PersonalityType.VelcroVelvet] = scores["velcro"] + scores["chill"],
-            [PersonalityType.GardenDestroyer] = scores["garden"] + scores["energy"],
-            [PersonalityType.DramaQueen] = scores["drama"] + scores["sass"]
+            [PersonalityType.GardenArchitect] = scores["garden"] + scores["energy"],
+            [PersonalityType.SquirrelIntelligence] = scores["bark"] + scores["energy"],
+            [PersonalityType.WindowWatcher] = scores["bark"] + scores["sass"],
+            [PersonalityType.DoorGreeter] = scores["velcro"] + scores["energy"]
         };
 
         return typeScores.OrderByDescending(x => x.Value).First().Key;
@@ -221,14 +227,20 @@ public static class PersonalityCalculator
 
     private static string GetDisplayName(PersonalityType type) => type switch
     {
-        PersonalityType.CouchThief => "Professional Couch Thief",
-        PersonalityType.ZoomiesChampion => "Olympic Zoomies Champion",
-        PersonalityType.TreatNegotiator => "Professional Treat Negotiator",
-        PersonalityType.SockCollector => "Certified Sock Collector",
-        PersonalityType.BarkingBarrister => "Barking Barrister",
-        PersonalityType.VelcroVelvet => "Velcro Dog Extraordinaire",
-        PersonalityType.GardenDestroyer => "Landscape Architect",
-        PersonalityType.DramaQueen => "Dramatic Arts Major",
+        PersonalityType.CouchThief => "🛋️ Professional Couch Thief",
+        PersonalityType.CushionEngineer => "🏗️ Certified Cushion Engineer",
+        PersonalityType.ZoomiesChampion => "🏃 Olympic Zoomies Gold Medalist",
+        PersonalityType.PerpetualNapper => "😴 Napping is a Lifestyle",
+        PersonalityType.TreatNegotiator => "🍪 Professional Treat Negotiator",
+        PersonalityType.FloorFoodInspector => "🔍 Floor Quality Control Officer",
+        PersonalityType.SockCollector => "🧦 Sock Acquisition Specialist",
+        PersonalityType.ShoeGuardian => "👟 Designated Shoe Protector",
+        PersonalityType.DramaQueen => "🎭 Dramatic Arts Major",
+        PersonalityType.VelcroVelvet => "🧲 Velcro Dog Extraordinaire",
+        PersonalityType.GardenArchitect => "🌱 Landscape Remodeling Consultant",
+        PersonalityType.SquirrelIntelligence => "🐿️ Counter-Squirrel Operations Director",
+        PersonalityType.WindowWatcher => "🪟 Neighborhood Watch Commander",
+        PersonalityType.DoorGreeter => "🚪 Chief Happiness Officer",
         _ => type.ToString()
     };
 
@@ -237,13 +249,19 @@ public static class PersonalityCalculator
         return type switch
         {
             PersonalityType.CouchThief => "Will steal your spot the moment you stand up. Has perfected the art of looking innocent.",
+            PersonalityType.CushionEngineer => "Architecture degree from Floof University. Every cushion has its place.",
             PersonalityType.ZoomiesChampion => "Powered by an unknown energy source. May spontaneously achieve lightspeed.",
+            PersonalityType.PerpetualNapper => "Has achieved enlightenment through the art of sleeping 18 hours a day.",
             PersonalityType.TreatNegotiator => "Has never met a treat they didn't deserve. Expert in puppy-eye diplomacy.",
+            PersonalityType.FloorFoodInspector => "If it hit the floor, it's legally theirs. 0.2 second reaction time.",
             PersonalityType.SockCollector => "Curator of a private sock museum. Location: classified.",
-            PersonalityType.BarkingBarrister => "Objects to everything. Loudly. The wind? Objectionable. Leaves? Also objectionable.",
-            PersonalityType.VelcroVelvet => "Personal space is a myth. Your lap is their office.",
-            PersonalityType.GardenDestroyer => "Has redesigned your backyard. You're welcome.",
+            PersonalityType.ShoeGuardian => "These shoes smell like you, therefore they must be protected.",
             PersonalityType.DramaQueen => "Oscar-worthy performances daily. Specializes in betrayed looks.",
+            PersonalityType.VelcroVelvet => "Personal space is a myth. Your lap is their office.",
+            PersonalityType.GardenArchitect => "Has redesigned your backyard. You're welcome for the holes.",
+            PersonalityType.SquirrelIntelligence => "Trust no one. Especially squirrels. They're planning something.",
+            PersonalityType.WindowWatcher => "That leaf looked at me wrong. Everything must be barked at.",
+            PersonalityType.DoorGreeter => "YOU'RE HOME! YOU WERE GONE FOR 84 YEARS!",
             _ => "A unique and wonderful cavoodle!"
         };
     }
