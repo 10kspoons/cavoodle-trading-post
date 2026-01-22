@@ -1,0 +1,6 @@
+@CavoodleTrading.Api_HostAddress = http://localhost:5133
+
+GET {{CavoodleTrading.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
