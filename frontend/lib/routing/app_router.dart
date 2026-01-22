@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import '../features/home/home_screen.dart';
 import '../features/listings/listing_detail_screen.dart';
+import '../features/listings/create_listing_screen.dart';
 import '../features/auth/login_screen.dart';
 import '../features/auth/register_screen.dart';
 import '../features/quiz/quiz_screen.dart';
@@ -20,6 +21,11 @@ final appRouter = GoRouter(
       builder: (context, state) => ListingDetailScreen(
         listingId: state.pathParameters['id']!,
       ),
+    ),
+    GoRoute(
+      path: '/create',
+      name: 'create',
+      builder: (context, state) => const CreateListingScreen(),
     ),
     GoRoute(
       path: '/login',
