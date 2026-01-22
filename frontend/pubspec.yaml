@@ -47,12 +47,4 @@ flutter:
   uses-material-design: true
   
   assets:
-    - assets/images/
     - assets/images/logo/
-    
-  fonts:
-    - family: Nunito
-      fonts:
-        - asset: assets/fonts/Nunito-Regular.ttf
-        - asset: assets/fonts/Nunito-Bold.ttf
-          weight: 700

@@ -1,0 +1,106 @@
+time="2026-01-22T10:58:32+10:00" level=warning msg="C:\\Users\\paul\\source\\repos\\capoo-trade\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+Compose now can delegate build to bake for better performances
+Just set COMPOSE_BAKE=true
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [web internal] load build definition from Dockerfile
+#1 transferring dockerfile: 939B done
+#1 DONE 0.0s
+
+#2 [web internal] load metadata for ghcr.io/cirruslabs/flutter:3.24.0
+#2 DONE 0.8s
+
+#3 [web internal] load metadata for docker.io/library/nginx:1.25-alpine
+#3 DONE 0.9s
+
+#4 [web internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [web final 1/4] FROM docker.io/library/nginx:1.25-alpine@sha256:516475cc129da42866742567714ddc681e5eed7b9ee0b9e9c015e464b4221a00
+#5 resolve docker.io/library/nginx:1.25-alpine@sha256:516475cc129da42866742567714ddc681e5eed7b9ee0b9e9c015e464b4221a00 0.0s done
+#5 CACHED
+
+#6 [web build 1/6] FROM ghcr.io/cirruslabs/flutter:3.24.0@sha256:eeef49aa71066f71c5b53962ff957f6edd84949da6496ea432f7f455db220b08
+#6 resolve ghcr.io/cirruslabs/flutter:3.24.0@sha256:eeef49aa71066f71c5b53962ff957f6edd84949da6496ea432f7f455db220b08 0.0s done
+#6 DONE 0.0s
+
+#7 [web internal] load build context
+#7 transferring context: 1.44kB done
+#7 DONE 0.0s
+
+#8 [web build 3/6] COPY pubspec.* ./
+#8 CACHED
+
+#9 [web build 4/6] RUN flutter pub get
+#9 CACHED
+
+#10 [web build 2/6] WORKDIR /app
+#10 CACHED
+
+#11 [web build 5/6] COPY . .
+#11 CACHED
+
+#12 [web build 6/6] RUN flutter build web --release --web-renderer html
+#12 0.230    Woah! You appear to be trying to run flutter as root.
+#12 0.230    We strongly recommend running the flutter tool without superuser privileges.
+#12 0.230   /
+#12 0.230 ≡ƒôÄ
+#12 0.337 Downloading Web SDK...                                              4.5s
+#12 6.716 
+#12 6.807 Compiling lib/main.dart for the Web...                          
+#12 6.871 Warning: In index.html:16: Local variable for "serviceWorkerVersion" is deprecated. Use "{{flutter_service_worker_version}}" template token instead. See https://docs.flutter.dev/platform-integration/web/initialization for more details.
+#12 39.17 Error: unable to locate asset entry in pubspec.yaml: "assets/fonts/Nunito-Regular.ttf".
+#12 39.18 Target web_release_bundle failed: Exception: Failed to bundle asset files.
+#12 39.18 #0      copyAssets (package:flutter_tools/src/build_system/targets/assets.dart:69:5)
+#12 39.18 <asynchronous suspension>
+#12 39.18 #1      WebReleaseBundle.build (package:flutter_tools/src/build_system/targets/web.dart:448:29)
+#12 39.18 <asynchronous suspension>
+#12 39.18 #2      _BuildInstance._invokeInternal (package:flutter_tools/src/build_system/build_system.dart:875:9)
+#12 39.18 <asynchronous suspension>
+#12 39.18 #3      Future.wait.<anonymous closure> (dart:async/future.dart:534:21)
+#12 39.18 <asynchronous suspension>
+#12 39.18 #4      _BuildInstance.invokeTarget (package:flutter_tools/src/build_system/build_system.dart:813:32)
+#12 39.18 <asynchronous suspension>
+#12 39.18 #5      FlutterBuildSystem.build (package:flutter_tools/src/build_system/build_system.dart:635:16)
+#12 39.18 <asynchronous suspension>
+#12 39.18 #6      WebBuilder.buildWeb (package:flutter_tools/src/web/compile.dart:92:34)
+#12 39.18 <asynchronous suspension>
+#12 39.18 #7      BuildWebCommand.runCommand (package:flutter_tools/src/commands/build_web.dart:227:5)
+#12 39.18 <asynchronous suspension>
+#12 39.18 #8      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1408:27)
+#12 39.18 <asynchronous suspension>
+#12 39.18 #9      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+#12 39.18 <asynchronous suspension>
+#12 39.18 #10     CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+#12 39.18 <asynchronous suspension>
+#12 39.18 #11     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:420:9)
+#12 39.18 <asynchronous suspension>
+#12 39.18 #12     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+#12 39.18 <asynchronous suspension>
+#12 39.18 #13     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:364:5)
+#12 39.18 <asynchronous suspension>
+#12 39.18 #14     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:130:9)
+#12 39.18 <asynchronous suspension>
+#12 39.18 #15     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+#12 39.18 <asynchronous suspension>
+#12 39.18 #16     main (package:flutter_tools/executable.dart:93:3)
+#12 39.18 <asynchronous suspension>
+#12 39.18 
+#12 39.18 Compiling lib/main.dart for the Web...                             32.3s
+#12 39.18 Error: Failed to compile application for the Web.
+#12 ERROR: process "/bin/sh -c flutter build web --release --web-renderer html" did not complete successfully: exit code: 1
+------
+ > [web build 6/6] RUN flutter build web --release --web-renderer html:
+39.18 <asynchronous suspension>
+39.18 #14     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:130:9)
+39.18 <asynchronous suspension>
+39.18 #15     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+39.18 <asynchronous suspension>
+39.18 #16     main (package:flutter_tools/executable.dart:93:3)
+39.18 <asynchronous suspension>
+39.18 
+39.18 Compiling lib/main.dart for the Web...                             32.3s
+39.18 Error: Failed to compile application for the Web.
+------
+failed to solve: process "/bin/sh -c flutter build web --release --web-renderer html" did not complete successfully: exit code: 1

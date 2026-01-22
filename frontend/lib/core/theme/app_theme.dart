@@ -80,7 +80,7 @@ class AppTheme {
           borderRadius: BorderRadius.circular(20),
         ),
       ),
-      fontFamily: 'Nunito',
+      fontFamily: null,
       textTheme: const TextTheme(
         displayLarge: TextStyle(
           fontSize: 32,
@@ -143,7 +143,7 @@ class AppTheme {
           ),
         ),
       ),
-      fontFamily: 'Nunito',
+      fontFamily: null,
     );
   }
 }

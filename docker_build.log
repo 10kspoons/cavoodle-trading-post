@@ -1,0 +1,108 @@
+time="2026-01-22T10:53:35+10:00" level=warning msg="C:\\Users\\paul\\source\\repos\\capoo-trade\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+Compose now can delegate build to bake for better performances
+Just set COMPOSE_BAKE=true
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [api internal] load build definition from Dockerfile
+#1 transferring dockerfile: 995B done
+#1 DONE 0.0s
+
+#2 [api internal] load metadata for mcr.microsoft.com/dotnet/sdk:9.0
+#2 ...
+
+#3 [api internal] load metadata for mcr.microsoft.com/dotnet/aspnet:9.0
+#3 DONE 1.4s
+
+#2 [api internal] load metadata for mcr.microsoft.com/dotnet/sdk:9.0
+#2 DONE 1.4s
+
+#4 [api internal] load .dockerignore
+#4 transferring context: 103B done
+#4 DONE 0.0s
+
+#5 [api base 1/3] FROM mcr.microsoft.com/dotnet/aspnet:9.0@sha256:8bbb7b9045f04a32d2eaad43b351e67f07c1f9604811dd505fc3654b4bec2176
+#5 resolve mcr.microsoft.com/dotnet/aspnet:9.0@sha256:8bbb7b9045f04a32d2eaad43b351e67f07c1f9604811dd505fc3654b4bec2176 0.0s done
+#5 DONE 0.0s
+
+#6 [api base 2/3] WORKDIR /app
+#6 CACHED
+
+#7 [api build 1/7] FROM mcr.microsoft.com/dotnet/sdk:9.0@sha256:0d84f05256dec37a5d1739158fd5ea197b8ad3b4e8d0e32be47b754db5963a9e
+#7 resolve mcr.microsoft.com/dotnet/sdk:9.0@sha256:0d84f05256dec37a5d1739158fd5ea197b8ad3b4e8d0e32be47b754db5963a9e 0.0s done
+#7 DONE 0.0s
+
+#8 [api internal] load build context
+#8 transferring context: 19.62kB 0.0s done
+#8 DONE 0.0s
+
+#9 [api build 5/7] COPY src/ .
+#9 CACHED
+
+#10 [api build 2/7] WORKDIR /src
+#10 CACHED
+
+#11 [api build 3/7] COPY src/CavoodleTrading.Api/CavoodleTrading.Api.csproj CavoodleTrading.Api/
+#11 CACHED
+
+#12 [api build 4/7] RUN dotnet restore CavoodleTrading.Api/CavoodleTrading.Api.csproj
+#12 CACHED
+
+#13 [api build 6/7] WORKDIR /src/CavoodleTrading.Api
+#13 CACHED
+
+#14 [api build 7/7] RUN dotnet build CavoodleTrading.Api.csproj --no-restore -c Release -o /app/build
+#14 1.037 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018: The "ResolvePackageAssets" task failed unexpectedly. [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.037 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018: NuGet.Packaging.Core.PackagingException: Unable to find fallback package folder 'C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages'. [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.037 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at NuGet.Packaging.FallbackPackagePathResolver..ctor(String userPackageFolder, IEnumerable`1 fallbackPackageFolders) [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.037 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks.NuGetPackageResolver.CreateResolver(IEnumerable`1 packageFolders) [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.037 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks.ResolvePackageAssets.CacheWriter..ctor(ResolvePackageAssets task) [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.037 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks.ResolvePackageAssets.CacheReader.CreateReaderFromDisk(ResolvePackageAssets task, Byte[] settingsHash) [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.037 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks.ResolvePackageAssets.CacheReader..ctor(ResolvePackageAssets task) [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.037 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks.ResolvePackageAssets.ReadItemGroups() [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.037 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks.ResolvePackageAssets.ExecuteCore() [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.037 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks.TaskBase.Execute() [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.037 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.Build.BackEnd.TaskExecutionHost.Execute() [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.037 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.Build.BackEnd.TaskBuilder.ExecuteInstantiatedTask(TaskExecutionHost taskExecutionHost, TaskLoggingContext taskLoggingContext, TaskHost taskHost, ItemBucket bucket, TaskExecutionMode howToExecuteTask) [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.045 
+#14 1.045 Build FAILED.
+#14 1.045 
+#14 1.045 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018: The "ResolvePackageAssets" task failed unexpectedly. [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.045 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018: NuGet.Packaging.Core.PackagingException: Unable to find fallback package folder 'C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages'. [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.045 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at NuGet.Packaging.FallbackPackagePathResolver..ctor(String userPackageFolder, IEnumerable`1 fallbackPackageFolders) [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.045 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks.NuGetPackageResolver.CreateResolver(IEnumerable`1 packageFolders) [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.045 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks.ResolvePackageAssets.CacheWriter..ctor(ResolvePackageAssets task) [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.045 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks.ResolvePackageAssets.CacheReader.CreateReaderFromDisk(ResolvePackageAssets task, Byte[] settingsHash) [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.045 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks.ResolvePackageAssets.CacheReader..ctor(ResolvePackageAssets task) [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.045 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks.ResolvePackageAssets.ReadItemGroups() [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.045 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks.ResolvePackageAssets.ExecuteCore() [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.045 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks.TaskBase.Execute() [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.045 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.Build.BackEnd.TaskExecutionHost.Execute() [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.045 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.Build.BackEnd.TaskBuilder.ExecuteInstantiatedTask(TaskExecutionHost taskExecutionHost, TaskLoggingContext taskLoggingContext, TaskHost taskHost, ItemBucket bucket, TaskExecutionMode howToExecuteTask) [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+#14 1.045     0 Warning(s)
+#14 1.045     1 Error(s)
+#14 1.046 
+#14 1.046 Time Elapsed 00:00:00.42
+#14 ERROR: process "/bin/sh -c dotnet build CavoodleTrading.Api.csproj --no-restore -c Release -o /app/build" did not complete successfully: exit code: 1
+
+#15 [api base 3/3] RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+#15 0.406 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#15 0.714 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#15 0.721 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+#15 0.727 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8792 kB]
+#15 0.974 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+#15 0.978 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [291 kB]
+#15 CANCELED
+------
+ > [api build 7/7] RUN dotnet build CavoodleTrading.Api.csproj --no-restore -c Release -o /app/build:
+1.045 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks.ResolvePackageAssets.CacheReader..ctor(ResolvePackageAssets task) [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+1.045 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks.ResolvePackageAssets.ReadItemGroups() [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+1.045 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks.ResolvePackageAssets.ExecuteCore() [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+1.045 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks.TaskBase.Execute() [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+1.045 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.Build.BackEnd.TaskExecutionHost.Execute() [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+1.045 /usr/share/dotnet/sdk/9.0.310/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.Build.BackEnd.TaskBuilder.ExecuteInstantiatedTask(TaskExecutionHost taskExecutionHost, TaskLoggingContext taskLoggingContext, TaskHost taskHost, ItemBucket bucket, TaskExecutionMode howToExecuteTask) [/src/CavoodleTrading.Api/CavoodleTrading.Api.csproj]
+1.045     0 Warning(s)
+1.045     1 Error(s)
+1.046 
+1.046 Time Elapsed 00:00:00.42
+------
+failed to solve: process "/bin/sh -c dotnet build CavoodleTrading.Api.csproj --no-restore -c Release -o /app/build" did not complete successfully: exit code: 1
